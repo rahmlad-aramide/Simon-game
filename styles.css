@@ -1,12 +1,17 @@
 body {
   text-align: center;
   background-color: #011F3F;
+  height: 94vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 2rem;
-  margin:  5%;
+  margin:  5vh;
   color: #FEF2BF;
 }
 
@@ -14,11 +19,10 @@ body {
   display: block;
   width: 50%;
   margin: auto;
-
 }
 
 .btn {
-  margin: 15px;
+  margin: 1vh;
   display: inline-block;
   height: 150px;
   width: 150px;
@@ -51,4 +55,14 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+@media only screen and (max-width: 600px){
+  .btn {
+    height: 250px;
+    width: 250px;
+  }
+  .container {
+    margin: 10vh auto;
+    width: 90%;
+  }
 }
