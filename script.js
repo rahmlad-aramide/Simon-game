@@ -89,4 +89,4 @@ const playBackgroundSound = (name) => {
     audio.play();
     audio.loop = true;
 };
-$(document).ready(playBackgroundSound("background"));
+playBackgroundSound("background");
