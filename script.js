@@ -13,7 +13,7 @@ $("#start").on("click", function(){
     if(!started){
         nextSequence();
         $("#level-title").text(`Level ${level}`)
-      $("#start").css("display", "none"); 
+      $("#start").addClass("none"); 
         started = true;
     }
 });
@@ -82,7 +82,7 @@ const startOver = () => {
     started = false;
   if(!started){
   $("#start").text("Restart")
-  $("#start").css("display", "flex");
+  $("#start").addClass("start-div");
   $("#welcome").text("Wrong button, pls restart 😥")
 }
 }

@@ -16,7 +16,9 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
+.none {
+  display: none;
+}
 #level-title, .welcome, .marquee {
   font-family: 'Press Start 2P', cursive;
   line-height: 1.5;
