@@ -82,7 +82,7 @@ const startOver = () => {
     started = false;
   if(!started){
   $("#start").text("Restart")
-  $("#start").css("display", "block");
+  $("#start").css("display", "flex");
   $("#welcome").text("Wrong button, pls restart 😥")
 }
 }
