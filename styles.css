@@ -10,7 +10,7 @@
 body {
   text-align: center;
   background-color: #011F3F;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -87,6 +87,9 @@ body {
   padding: .5rem 2rem;
 }
 @media only screen and (max-width: 1200px){
+  body {
+    height: 100%;
+  }
   /*Tablets [601px -> 1200px]*/
   .btn {
     height: 20rem;
