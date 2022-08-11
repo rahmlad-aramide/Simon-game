@@ -12,8 +12,8 @@ const buttonColours = ["red", "blue", "green", "yellow"]
 $("#start").on("click", function(){
     if(!started){
         nextSequence();
+        $("#start").css("display","none"); 
         $("#level-title").text(`Level ${level}`)
-      $("#start").addClass("none"); 
         started = true;
     }
 });
@@ -68,6 +68,7 @@ const checkAnswer = (currentLevel) => {
             $("body").removeClass("game-over")
         }, 200);
     $("#level-title").text(`Game Over, restart game`); 
+    $("#start").css("display", "none");
       setTimeout(() => {
         $("#welcome").text(`Simon Game V.2.0 🚀`);   
       }, 2000);  
@@ -82,7 +83,7 @@ const startOver = () => {
     started = false;
   if(!started){
   $("#start").text("Restart")
-  $("#start").addClass("start-div");
+  $("#start").css("display", "flex");
   $("#welcome").text("Wrong button, pls restart 😥")
 }
 }

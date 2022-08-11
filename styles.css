@@ -22,7 +22,7 @@ body {
 #level-title, .welcome, .marquee {
   font-family: 'Press Start 2P', cursive;
   line-height: 1.5;
-  font-size: auto;
+  
   margin: auto;
   color: #FEF2BF;
 }
@@ -82,30 +82,31 @@ body {
   color:  var(--color-dark);
   background: var(--color-light);
   border-radius: 1rem;
-  width: 50%;
-  padding: .5rem;
+  width: fit-content;
+  font-size: 1.5rem;
+  padding: .5rem 2rem;
 }
 @media only screen and (max-width: 1200px){
   /*Tablets [601px -> 1200px]*/
   .btn {
-    height: 10rem;
-    width: 10rem;
+    height: 20rem;
+    width: 20rem;
   }
 }
-@media only screen and (max-width: 600px){
 /*Big smartphones [426px -> 600px]*/
+/* @media only screen and (max-width: 600px){
 .btn {
   height: 15rem;
   width: 15rem;
 }
 }
 @media only screen and (max-width: 425px){
+  .btn {
+    height: 20rem;
+    width: 20rem;
+  }
+} */
 /*Small smartphones [325px -> 425px]*/
-.btn {
-  height: 20rem;
-  width: 20rem;
-}
-}
 
 /* @media only screen and (max-width: 900px){
   
