@@ -2,10 +2,15 @@
   --color-light: #FEF2BF;
   --color-dark: #011F3F;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   text-align: center;
   background-color: #011F3F;
-  height: 94vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -14,22 +19,28 @@ body {
 
 #level-title, .welcome, .marquee {
   font-family: 'Press Start 2P', cursive;
+  line-height: 1.5;
   font-size: auto;
-  margin: 20px;
+  margin: auto;
   color: #FEF2BF;
 }
-
-.container {
-  display: block;
-  width: 50%;
-  margin: auto;
+.header {
+  margin: 3rem 0;
 }
-
+#level-title {
+  margin-bottom: 3rem;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .btn {
-  margin: 1vh;
+  margin: auto;
   display: inline-block;
-  height: 150px;
-  width: 150px;
+  height: 10rem;
+  width: 10rem;
   border: 5px solid black;
   border-radius: 20%;
   cursor: pointer;
@@ -60,6 +71,10 @@ body {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
+.start-div {
+  display: flex;
+  justify-content: center;
+}
 #start {
   border: none;
   color:  var(--color-dark);
@@ -68,13 +83,45 @@ body {
   width: 50%;
   padding: .5rem;
 }
-@media (max-width: 600px){
+@media only screen and (max-width: 1200px){
+  /*Tablets [601px -> 1200px]*/
   .btn {
-    height: 80px;
-    width: 80px;
+    height: 10rem;
+    width: 10rem;
+  }
+}
+@media only screen and (max-width: 600px){
+/*Big smartphones [426px -> 600px]*/
+.btn {
+  height: 15rem;
+  width: 15rem;
+}
+}
+@media only screen and (max-width: 425px){
+/*Small smartphones [325px -> 425px]*/
+.btn {
+  height: 20rem;
+  width: 20rem;
+}
+}
+
+/* @media only screen and (max-width: 900px){
+  
+  .btn {
+    height: 100px;
+    width: 100px;
   }
   .container {
     margin: 20px auto;
     width: 80%;
   }
-}
+  #level-title {
+    margin: 10%;
+  }
+  .welcome {
+    margin: 5%;
+  }
+  .marquee {
+    margin: 5%;
+  }
+} */
