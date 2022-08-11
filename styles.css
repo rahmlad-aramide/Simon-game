@@ -1,3 +1,7 @@
+:root {
+  --color-light: #FEF2BF;
+  --color-dark: #011F3F;
+}
 body {
   text-align: center;
   background-color: #011F3F;
@@ -5,13 +9,13 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  align-items: center;
 }
 
-#level-title {
+#level-title, .welcome, .marquee {
   font-family: 'Press Start 2P', cursive;
-  font-size: 2rem;
-  margin:  5vh;
+  font-size: auto;
+  margin: 20px;
   color: #FEF2BF;
 }
 
@@ -56,13 +60,21 @@ body {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
-@media only screen and (max-width: 600px){
+#start {
+  border: none;
+  color:  var(--color-dark);
+  background: var(--color-light);
+  border-radius: 1rem;
+  width: 50%;
+  padding: .5rem;
+}
+@media (max-width: 600px){
   .btn {
-    height: 250px;
-    width: 250px;
+    height: 80px;
+    width: 80px;
   }
   .container {
-    margin: 10vh auto;
-    width: 90%;
+    margin: 20px auto;
+    width: 80%;
   }
 }

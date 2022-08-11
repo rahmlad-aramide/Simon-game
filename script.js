@@ -9,19 +9,20 @@ let started = false;
 const buttonColours = ["red", "blue", "green", "yellow"]
 
 // Change the initial header text and start the game
-$(document).on("keypress", function(){
+$("#start").on("click", function(){
     if(!started){
         nextSequence();
-        $("h1").text(`Level ${level}`)
+        $("#level-title").text(`Level ${level}`)
+      $("#start").css("display", "none"); 
         started = true;
     }
 });
-
+    
 // Next sequence function
 const nextSequence = () => {
     userClickedPattern = [];
     level++;
-    $("h1").text(`Level ${level}`)
+    $("#level-title").text(`Level ${level}`)
     // Random Number
     let randomNumber = Math.floor(Math.random() * 4);
     // Random Chosen color
@@ -66,8 +67,11 @@ const checkAnswer = (currentLevel) => {
         setTimeout(() => {
             $("body").removeClass("game-over")
         }, 200);
-        $("h1").text(`Game Over, Press any key to restart`)
-        startOver();
+    $("#level-title").text(`Game Over, restart game`); 
+      setTimeout(() => {
+        $("#welcome").text(`Simon Game V.2.0 🚀`);   
+      }, 2000);  
+      startOver();
     }
 }
 
@@ -76,6 +80,11 @@ const startOver = () => {
     level = 0;
     gamePattern = [];
     started = false;
+  if(!started){
+  $("#start").text("Restart")
+  $("#start").css("display", "block");
+  $("#welcome").text("Wrong button, pls restart 😥")
+}
 }
 
 // Play the button sound
@@ -83,10 +92,3 @@ const playSound = (name) => {
     let audio = new Audio(`sounds/${name}.mp3`);
     audio.play();
 };
-// Play the background sound when the window has loaded
-const playBackgroundSound = (name) => {
-    let audio = new Audio(`sounds/${name}.mp3`);
-    audio.play();
-    audio.loop = true;
-};
-playBackgroundSound("background");
