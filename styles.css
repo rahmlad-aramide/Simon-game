@@ -10,8 +10,8 @@
 body {
   text-align: center;
   background-color: #011F3F;
-  height: 100%;
-  width: 100%;
+  height: 95%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,10 +27,28 @@ body {
   color: #FEF2BF;
 }
 .header {
-  margin: 3rem 0;
+  /* margin: 3rem 0; */
 }
-#level-title {
-  margin-bottom: 3rem;
+.title, .header, .marquee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  min-height: 15vh;
+  /* height: 15vh;   */
+}
+.header {
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.row {
+  height: 25vh;
+}
+.marquee {
+  height: 10vh;
 }
 .container {
   display: flex;
@@ -41,8 +59,10 @@ body {
 .btn {
   margin: auto;
   display: inline-block;
-  height: 10rem;
-  width: 10rem;
+  /* height: 10rem;
+  width: 10rem; */
+  height: 24vh;
+  width: 24vh;
   border: 5px solid black;
   border-radius: 20%;
   cursor: pointer;
@@ -76,6 +96,8 @@ body {
 .start-div {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 5vh;
 }
 #start {
   border: none;
@@ -86,14 +108,23 @@ body {
   font-size: 1.5rem;
   padding: .5rem 2rem;
 }
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 425px){
   body {
     height: 100%;
   }
   /*Tablets [601px -> 1200px]*/
   .btn {
-    height: 20rem;
-    width: 20rem;
+    height: 19vh;
+    width: 19vh;
+  }
+  .row {
+    height: 20vh;
+  }
+  * {
+    font-size: 99%;
+  }
+  #start {
+    font-size: 1rem;
   }
 }
 /*Big smartphones [426px -> 600px]*/
