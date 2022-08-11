@@ -11,9 +11,11 @@ const buttonColours = ["red", "blue", "green", "yellow"]
 // Change the initial header text and start the game
 $("#start").on("click", function(){
     if(!started){
-        nextSequence();
-        $("#start").css("display","none"); 
         $("#level-title").text(`Level ${level}`)
+        $("#start").css("display","none"); 
+        setTimeout(() => {  
+            nextSequence();
+        }, 500);
         started = true;
     }
 });
